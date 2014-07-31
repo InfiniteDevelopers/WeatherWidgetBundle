@@ -1,11 +1,10 @@
-=======
 #WeatherWidgetBundle
-===================
+=======
 
 Twig extension to display a widget with the current wheater and temperature using openweathermap and cmfcmf/OpenWeatherMap-PHP-Api
 
 ## Configuration
-===================
+=======
 
 add this in your config.yml
 ```
@@ -15,7 +14,7 @@ infinite_developers_weather_widget:
 ```
 
 ## Usage
-===================
+=======
 
 Use it in a twig template like this
 ```
@@ -31,7 +30,7 @@ Use it in a twig template like this
 ```
 
 ## Roadmap
-===================
+=======
 
 Coming soon
 * caching open weather map request
@@ -41,5 +40,5 @@ Suggestion
 * we're currenlyt using internal base64 converter twig extension for displaying images, we may change it
 
 ## Licence
-===================
+=======
 Code is under MIT licence, image are free to use.

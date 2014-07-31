@@ -11,8 +11,8 @@
             "email": "bidubida@gmail.com"
         }
     ],
-	"require": {
-        "cmfcmf/openweathermap-php-api": "~2.0",
+    "require": {
+        "cmfcmf/openweathermap-php-api": "~2.0"
     },
     "autoload": {
         "psr-0": { "InfiniteDevelopers\\WeatherWidgetBundle": "" }

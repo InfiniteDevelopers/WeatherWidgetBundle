@@ -1,0 +1,46 @@
+<div id="id_weather_widget" class="{{ type }}">
+	<div>
+		<div>
+			{{ weather.temperature.value }} &deg;{{ unit }}
+		</div>
+		
+		<time>
+			{{ 'now'|date('d/m') }} à {{ 'now'|date('H:i') }}
+		</time>
+	</div>
+</div>
+
+<style>
+	#id_weather_widget {
+		position: relative;
+		height: 150px;
+		width: 100%;
+		background-size: cover;
+	}
+	#id_weather_widget.cloud {
+		background-image: url('{{ w_image64("Resources/public/widget/images/cloud.jpg") }}');
+	}
+	#id_weather_widget > div {
+		position: absolute;
+		bottom: 0;
+		height: 25px;
+		width: 100%;
+		background-color: rgba(124, 124, 124, 0.4);
+	}
+	#id_weather_widget > div > div,
+	#id_weather_widget > div > time {
+		display: inline-block;
+		font-size: 20px;
+		line-height: 25px;
+		color: white;
+	}
+	#id_weather_widget > div > div {
+		float: left;
+		padding-left: 10px;
+	}
+	#id_weather_widget > div > time {
+		float: right;
+		padding-right: 10px;
+	}
+
+</style>

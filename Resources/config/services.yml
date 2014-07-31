@@ -1,0 +1,14 @@
+parameters:
+    infinite_developers_weather_widget.owm.class: InfiniteDevelopers\WeatherWidgetBundle\Classes\OWMWrapper
+    infinite_developers_weather_widget.widget.class: InfiniteDevelopers\WeatherWidgetBundle\Twig\WeatherWidgetExtension
+
+services:
+    infinite_developers_weather_widget.owm:
+        class: %infinite_developers_weather_widget.owm.class%
+        arguments: [%infinite_developers_weather_widget.owm_key%, %infinite_developers_weather_widget.owm_lang%, %infinite_developers_weather_widget.owm_units%]
+
+    infinite_developers_weather_widget.widget:
+        class: %infinite_developers_weather_widget.widget.class%
+        arguments: ['@infinite_developers_weather_widget.owm']
+        tags:
+            - { name: twig.extension }

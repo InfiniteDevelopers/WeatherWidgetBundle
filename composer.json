@@ -1,0 +1,22 @@
+{
+	"name": "infinitedevelopers/weatherwidget-bundle",
+    "type": "symfony-bundle",
+    "description": "Widget to display current weather",
+    "keywords": ["weather", "widget", "twig extension"],
+    "homepage": "http://github.com/InfiniteDevelopers/WeatherWidgetBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "François Di Cioccio",
+            "email": "bidubida@gmail.com"
+        }
+    ],
+	"require": {
+        "cmfcmf/openweathermap-php-api": "~2.0",
+    },
+    "autoload": {
+        "psr-0": { "InfiniteDevelopers\\WeatherWidgetBundle": "" }
+    },
+    "minimum-stability": "dev",
+    "target-dir": "InfiniteDevelopers/WeatherWidgetBundle"
+}

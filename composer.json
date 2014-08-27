@@ -12,7 +12,8 @@
         }
     ],
     "require": {
-        "cmfcmf/openweathermap-php-api": "~2.0"
+        "cmfcmf/openweathermap-php-api": "~2.0",
+        "infinitedevelopers/base64bundle": "dev-master"
     },
     "autoload": {
         "psr-0": { "InfiniteDevelopers\\WeatherWidgetBundle": "" }

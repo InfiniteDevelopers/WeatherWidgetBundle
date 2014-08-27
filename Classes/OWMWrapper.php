@@ -20,7 +20,7 @@ class OWMWrapper
 	public function getWeather($query)
 	{
 		$owm = new OpenWeatherMap();
-		return $weather = $owm->getWeather($query, $this->units, $this->lang, $this->apiKey);
+		return $owm->getWeather($query, $this->units, $this->lang, $this->apiKey);
 	}
 
 	public function getWeatherForecast($query, $days = 1)

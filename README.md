@@ -11,10 +11,11 @@ Twig extension to display a widget with the current wheater and temperature usin
 }
 ```
 
-* add package in AppKernel.php
+* add package and dependencies in AppKernel.php
 ```
 $bundles = array(
 	[...],
+	new InfiniteDevelopers\Base64Bundle\InfiniteDevelopersBase64Bundle(),
     new InfiniteDevelopers\WeatherWidgetBundle\InfiniteDevelopersWeatherWidgetBundle()
 );
 ```

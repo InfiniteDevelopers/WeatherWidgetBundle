@@ -23,7 +23,8 @@ class WeatherWidgetExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction('weather_widget', array($this, 'renderWidget'), array('is_safe' => array('html')))
+            new \Twig_SimpleFunction('weather_widget', array($this, 'renderWidget'), array('is_safe' => array('html'))),
+            new \Twig_SimpleFunction('ww_r2p', array($this, 'ressourceToPath')))
         );
     }
 
@@ -46,6 +47,15 @@ class WeatherWidgetExtension extends \Twig_Extension
                 'unit' =>$unit
             )
         );
+    }
+    /**
+     * Transform local ressource string to absolute file path
+     * @param  string $path relative path to image from bundle directory
+     * @return string       absolute path to image
+     */
+    public function ressourceToPath($path)
+    {
+        return __DIR__.'/../'.$path;
     }
 
     public function getName()

@@ -47,7 +47,7 @@ Use it in a twig template like this
 ## Roadmap
 
 Coming soon
-* caching open weather map request
+* ~~caching open weather map request~~
 * serveral images for different weather conditions
 
 Suggestion

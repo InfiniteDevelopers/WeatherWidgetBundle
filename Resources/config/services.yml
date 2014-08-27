@@ -5,7 +5,7 @@ parameters:
 services:
     infinite_developers_weather_widget.owm:
         class: %infinite_developers_weather_widget.owm.class%
-        arguments: [%infinite_developers_weather_widget.owm_key%, %infinite_developers_weather_widget.owm_lang%, %infinite_developers_weather_widget.owm_units%]
+        arguments: [%infinite_developers_weather_widget.owm_key%, %infinite_developers_weather_widget.owm_lang%, %infinite_developers_weather_widget.owm_units%, %kernel.cache_dir%]
 
     infinite_developers_weather_widget.widget:
         class: %infinite_developers_weather_widget.widget.class%

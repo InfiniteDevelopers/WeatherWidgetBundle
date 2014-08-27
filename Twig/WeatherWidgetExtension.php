@@ -24,7 +24,7 @@ class WeatherWidgetExtension extends \Twig_Extension
     {
         return array(
             new \Twig_SimpleFunction('weather_widget', array($this, 'renderWidget'), array('is_safe' => array('html'))),
-            new \Twig_SimpleFunction('ww_r2p', array($this, 'ressourceToPath')))
+            new \Twig_SimpleFunction('ww_r2p', array($this, 'ressourceToPath'))
         );
     }
 

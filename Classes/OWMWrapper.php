@@ -20,18 +20,18 @@ class OWMWrapper
 
 	public function getWeather($query)
 	{
-		$owm = new OpenWeatherMap(null, new WeatherCache($this->cacheDir), 30);
+		$owm = new OpenWeatherMap(null, new WeatherCache($this->cacheDir), 600);
 		return $owm->getWeather($query, $this->units, $this->lang, $this->apiKey);
 	}
 
 	public function getWeatherForecast($query, $days = 1)
 	{
-		$owm = new OpenWeatherMap(null, new WeatherCache($this->cacheDir), 30);
+		$owm = new OpenWeatherMap(null, new WeatherCache($this->cacheDir), 600);
 		return $owm->getWeatherForecast($query, $this->units, $this->lang, $this->apiKey, $days)	;
 	}
 	public function getWeatherHistory($query, \DateTime $start, $endOrCount = 1, $type = 'hour')
 	{
-		$owm = new OpenWeatherMap(null, new WeatherCache($this->cacheDir), 30);
+		$owm = new OpenWeatherMap(null, new WeatherCache($this->cacheDir), 600);
 		return $own->getWeatherHistory($query, $start, $endOrCount, $type, $this->units, $this->lang, $this->apiKey);
 	}
 }

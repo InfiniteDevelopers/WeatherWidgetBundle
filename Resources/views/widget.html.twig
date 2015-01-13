@@ -1,7 +1,7 @@
 <div id="id_weather_widget" class="{{ type }}">
 	<div>
 		<div>
-			{{ weather.temperature.value }} &deg;{{ unit }}
+			{{ weather.temperature.value|number_format(1) }} &deg;{{ unit }}
 		</div>
 		
 		<time>
@@ -11,14 +11,22 @@
 </div>
 
 <style>
+	#id_weather_widget.day_sun { background-image: url('{{ image64(ww_r2p("Resources/public/widget/images/day_sun.jpg")) }}'); }
+	#id_weather_widget.day_rain { background-image: url('{{ image64(ww_r2p("Resources/public/widget/images/day_rain.jpg")) }}'); }
+	#id_weather_widget.day_storm { background-image: url('{{ image64(ww_r2p("Resources/public/widget/images/day_storm.jpg")) }}'); }
+	#id_weather_widget.day_snow { background-image: url('{{ image64(ww_r2p("Resources/public/widget/images/day_snow.jpg")) }}'); }
+	#id_weather_widget.day_cloud { background-image: url('{{ image64(ww_r2p("Resources/public/widget/images/day_cloud.jpg")) }}'); }
+	#id_weather_widget.night_clear { background-image: url('{{ image64(ww_r2p("Resources/public/widget/images/night_clear.jpg")) }}'); }
+	#id_weather_widget.night_rain { background-image: url('{{ image64(ww_r2p("Resources/public/widget/images/night_rain.jpg")) }}'); }
+	#id_weather_widget.night_storm { background-image: url('{{ image64(ww_r2p("Resources/public/widget/images/night_storm.jpg")) }}'); }
+	#id_weather_widget.night_snow { background-image: url('{{ image64(ww_r2p("Resources/public/widget/images/night_snow.jpg")) }}'); }
+	#id_weather_widget.night_cloud { background-image: url('{{ image64(ww_r2p("Resources/public/widget/images/night_cloud.jpg")) }}'); }
+
 	#id_weather_widget {
 		position: relative;
 		height: 100%;
 		width: 100%;
 		background-size: cover;
-	}
-	#id_weather_widget.cloud {
-		background-image: url('{{ image64(ww_r2p("Resources/public/widget/images/cloud.jpg")) }}');
 	}
 	#id_weather_widget > div {
 		position: absolute;

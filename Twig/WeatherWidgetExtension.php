@@ -8,10 +8,31 @@ class WeatherWidgetExtension extends \Twig_Extension
 {
     private $_owm;
     private $_environment;
+    private $icon_config;
 
     public function __construct($owm)
     {
         $this->_owm = $owm;
+        $this->icon_config = array(
+            '01d' => 'day_sun',
+            '02d' => 'day_sun',
+            '03d' => 'day_cloud',
+            '04d' => 'day_cloud',
+            '09d' => 'day_rain',
+            '10d' => 'day_rain',
+            '11d' => 'day_storm',
+            '13d' => 'day_snow',
+            '50d' => 'day_cloud',
+            '01n' => 'night_clear',
+            '02n' => 'night_clear',
+            '03n' => 'night_cloud',
+            '04n' => 'night_cloud',
+            '09n' => 'night_rain',
+            '10n' => 'night_rain',
+            '11n' => 'night_storm',
+            '13n' => 'night_snow',
+            '50n' => 'night_cloud'
+        );
     }
 
 
@@ -38,13 +59,13 @@ class WeatherWidgetExtension extends \Twig_Extension
         $resp = $this->_owm->getWeather($query);
         $unit = $resp->temperature->getUnit() == 'F' ? 'F' : 'C';
 
-        $type = 'cloud';
+        $type = $this->icon_config[$resp->weather->icon];
 
         return $this->_environment->render('InfiniteDevelopersWeatherWidgetBundle::widget.html.twig',
             array(
                 'weather' => $resp,
                 'type' => $type,
-                'unit' =>$unit
+                'unit' => $unit
             )
         );
     }

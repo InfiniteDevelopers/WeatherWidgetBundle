@@ -48,7 +48,7 @@ Use it in a twig template like this
 
 Coming soon
 * ~~caching open weather map request~~
-* serveral images for different weather conditions
+* ~~serveral images for different weather conditions~~
 
 Suggestion
 * we're currenlyt using internal base64 converter twig extension for displaying images, we may change it
